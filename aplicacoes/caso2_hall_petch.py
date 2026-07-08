@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Caso 2 — Previsão de Propriedades Mecânicas via Hall-Petch
 ===========================================================

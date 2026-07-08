@@ -1,16 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Simulacao de Crescimento de Graos por Automatos Celulares 2D
 =============================================================
 Modelo CA classico com aceitacao estocastica leve.
 
-PROBLEMA DA VERSAO ANTERIOR (simulacao_ca_graos_old.py):
-  A regra deterministica pura (aceitar apenas ΔE < 0) congelava os
-  contornos planos (ΔE = 0 → nunca aceitos), resultando em graos com
-  faces retas e geometria quadrada/poligonal sem curvatura.
-
-SOLUCAO IMPLEMENTADA:
+Regra de Implementação para contornos planos:
   Mantem a regra CA (proposta = vizinho de MINIMA energia — deterministica),
   mas adiciona aceitacao probabilistica para:
     ΔE < 0  →  P = 1.0          (sempre aceito — reduz energia)
@@ -21,6 +14,10 @@ SOLUCAO IMPLEMENTADA:
   preservando o carater de Automato Celular: a orientacao proposta e uma
   funcao deterministica do estado da vizinhanca (vizinho otimo), distinguindo
   esta abordagem do modelo Monte Carlo Potts (vizinho aleatorio).
+
+  A regra deterministica pura (aceitar apenas ΔE < 0) congelava os
+  contornos planos (ΔE = 0 → nunca aceitos), resultando em graos com
+  faces retas e geometria quadrada/poligonal sem curvatura.
 
 Baseado em:
   - He et al. (2006), Mater. Sci. Eng. A 429, 236-246
