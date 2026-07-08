@@ -154,6 +154,5 @@ _minted*
 *.bak
 *.sav
 
-# PDF gerado (geralmente é melhor manter apenas o código-fonte .tex no Git)
-# Se você QUISER versionar o PDF, comente a linha abaixo.
-*.pdf
+# PDF gerado
+#*.pdf
